@@ -11,7 +11,7 @@ def init_connection():
     DATABASE = st.secrets["database"]
     UID = st.secrets["username"]
     PWD = st.secrets["password"]
-    connectionString = f'DRIVER={{ODBC Driver 18 for SQL Server}};SERVER={SERVER};DATABASE={DATABASE};UID={UID};PWD={PWD}'
+    connectionString = f'DRIVER={{SQL Server}};SERVER={SERVER};DATABASE={DATABASE};UID={UID};PWD={PWD}'
     
     return pyodbc.connect(connectionString)
 
